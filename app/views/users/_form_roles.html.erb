@@ -1,0 +1,8 @@
+<p>
+  <label>
+    <%= l(:label_role_plural) %>:
+  </label>
+  <% roles.each do |role| %>
+    <span><%= check_box_tag 'user[role_ids][]', role.id, user.roles.include?(role), :id => nil %> <%= role %></span>
+  <% end %>
+</p>
