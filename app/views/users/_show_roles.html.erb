@@ -1,0 +1,8 @@
+<% unless user.roles.empty? %>
+  <h3><%=l(:label_role_plural)%></h3>
+  <ul>
+  <% for role in user.roles %>
+    <li><%= role %></li>
+  <% end %>
+  </ul>
+<% end %>
