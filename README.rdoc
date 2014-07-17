@@ -1,5 +1,0 @@
-= Espeo - Global User Roles plugin
-
-Allows you to define "global" roles on users, regardless of their projects' membership.
-
-To set user's roles, just edit his account (users#edit).
