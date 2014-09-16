@@ -2,6 +2,7 @@
   <label>
     <%= l(:label_role_plural) %>:
   </label>
+  <%= hidden_field_tag 'user[role_ids][]', nil, :id => nil %>
   <% roles.each do |role| %>
     <span><%= check_box_tag 'user[role_ids][]', role.id, user.roles.include?(role), :id => nil %> <%= role %></span>
   <% end %>
