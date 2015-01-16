@@ -1,5 +1,5 @@
-require 'espeo_global_user_roles/models/role_patch'
-require 'espeo_global_user_roles/models/user_patch'
+require 'espeo_global_user_roles/patches/role_patch'
+require 'espeo_global_user_roles/patches/user_patch'
 require 'espeo_global_user_roles/hooks'
 
 Redmine::Plugin.register :espeo_global_user_roles do

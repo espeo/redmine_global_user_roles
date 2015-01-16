@@ -1,4 +1,4 @@
-module EspeoGlobalUserRoles::Models::RolePatch
+module EspeoGlobalUserRoles::Patches::RolePatch
   def self.included(base)
     base.extend         ClassMethods
     base.send :include, InstanceMethods
@@ -8,14 +8,14 @@ module EspeoGlobalUserRoles::Models::RolePatch
       has_many :users, :through => :user_roles
     end
   end
-  
+
   module ClassMethods
   end
-  
+
   module InstanceMethods
   end
 end
 
 Rails.application.config.to_prepare do
-  Role.send :include, EspeoGlobalUserRoles::Models::RolePatch
+  Role.send :include, EspeoGlobalUserRoles::Patches::RolePatch
 end
